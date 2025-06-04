@@ -23,21 +23,21 @@ public class kthElem {
     //delete kth element
     
     public void deleteKthElement(int k) {
-    if (head == null || k <= 0) {
+    if (head==null || k<=0) {
         return;
     }
-    if (k == 1) {
-        head = head.next;
+    if (k==1) {
+        head=head.next;
         return;
     }
-    Node current = head;
-    for (int i = 1; current != null && i < k - 1; i++) {
+    Node current=head;
+    for (int i=1; current!=null && i<k-1; i++) {
         current = current.next;
     }
-    if (current == null || current.next == null) {
+    if (current==null || current.next==null) {
         return;
     }
-    current.next = current.next.next;
+    current.next=current.next.next;
     }
 
 
